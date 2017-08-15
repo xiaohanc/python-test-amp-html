@@ -25,7 +25,7 @@ if (string.find(content, '<meta name="viewport"') != -1) and (string.find(conten
     print "6th pass"
 if '<script async src="https://cdn.ampproject.org/v0.js"' in tags:
     print "7th pass"
-if (string.find(content, 'head > style[amp-boilerplate') != -1) and (string.find(content, 'noscript > style[amp-boilerplate]') != -1):
+if (string.find(content, '<style amp-boilerplate') != -1) and (string.find(content, '<noscript ') != -1):
     print "8th pass"
 
 '''check the format one by one according to each requirement'''

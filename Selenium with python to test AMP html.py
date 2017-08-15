@@ -4,16 +4,19 @@ import time
 
 url = "C:\Cross Broswer Drivers\chromedriver_win32\chromedriver.exe"
 driver = webdriver.Chrome(url)
+driver.get("http://www.cnn.com/2017/08/15/politics/dreamhost-department-of-justice-trump-opponents/index.html")
 '''using chrome webdriver of selenium to open the specified url'''
 
 tags=urllib.urlopen('http://www.cnn.com/2017/08/15/politics/dreamhost-department-of-justice-trump-opponents/index.html').read().split('>')
 
 '''get html tags from the specific url and save it as a list'''
 
-driver.get("http://www.cnn.com/2017/08/15/politics/dreamhost-department-of-justice-trump-opponents/index.html")
+
 
 if tags[0]=="<!DOCTYPE html":
     print 1
+'''verify if the html starts with the doctype <!doctype html> or not'''
+
 if driver.find_elements_by_tag_name("html") or driver.find_elements_by_tag_name("html amp"):
     print 2
 if driver.find_elements_by_tag_name('body') and driver.find_elements_by_tag_name("head"):

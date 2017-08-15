@@ -7,9 +7,8 @@ content=urllib.urlopen('http://www.cnn.com/2017/08/15/politics/dreamhost-departm
 tags=content.split('>')
 
 '''split the string by ">" and save it as a list'''
-print tags
 
-'''check the format one by one according to each requirement'''
+
 
 if tags[0]=="<!DOCTYPE html":
     print "1st pass"
@@ -29,6 +28,7 @@ if '<script async src="https://cdn.ampproject.org/v0.js"' in tags:
 if (string.find(content, 'head > style[amp-boilerplate') != -1) and (string.find(content, 'noscript > style[amp-boilerplate]') != -1):
     print "8th pass"
 
+'''check the format one by one according to each requirement'''
 
 
 

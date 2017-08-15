@@ -29,7 +29,7 @@ if driver.find_element_by_xpath("//meta[@name='viewport'][@content='width=device
     print 6
 if driver.find_element_by_xpath("//script[@src='https://cdn.ampproject.org/v0.js']"):
     print 7
-if driver.find_element_by_xpath("//style[@amp-boilerplate]"):
+if driver.find_element_by_xpath("//style[@amp-boilerplate]") and driver.find_element_by_xpath("//noscript/style/[@amp-boilerplate]"):
     print 8
 
 '''using Xpath to locate each tags and attributes responding to its value, detect if each required format tags exists or not'''

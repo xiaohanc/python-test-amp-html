@@ -33,3 +33,6 @@ if driver.find_element_by_xpath("//style[@amp-boilerplate]") and driver.find_ele
     print 8
 
 '''using Xpath to locate each tags and attributes responding to its value, detect if each required format tags exists or not'''
+
+
+
